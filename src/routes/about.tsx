@@ -12,12 +12,6 @@ export const Route = createFileRoute("/about")({
 });
 
 function About() {
-  const team = [
-    { name: "Arvinder Singh", role: "Chief Executive Officer", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop" },
-    { name: "Elena Cruz", role: "Head of Operations", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop" },
-    { name: "Michael Reyes", role: "Lead Solutions Engineer", img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1974&auto=format&fit=crop" },
-  ];
-
   return (
     <SiteLayout>
       <div className="bg-[#050505] text-white min-h-screen">
@@ -45,27 +39,6 @@ function About() {
                </p>
             </div>
           </div>
-        </section>
-
-        {/* Leadership Team */}
-        <section className="py-24 bg-[#0A0A0A] border-b border-white/10">
-           <div className="container mx-auto px-6">
-              <div className="text-center mb-16 max-w-2xl mx-auto">
-                 <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-white mb-4">Meet the Leadership</h2>
-                 <p className="text-white/50">Our executive team brings decades of combined experience in logistics, hardware engineering, and enterprise software.</p>
-              </div>
-              <div className="grid md:grid-cols-3 gap-8">
-                 {team.map(member => (
-                   <div key={member.name} className="group cursor-pointer">
-                      <div className="aspect-[4/5] rounded-3xl overflow-hidden mb-6 bg-white/5 border border-white/10 relative">
-                         <img src={member.img} alt={member.name} className="w-full h-full object-cover mix-blend-luminosity opacity-80 group-hover:mix-blend-normal group-hover:scale-105 transition duration-500" />
-                      </div>
-                      <h3 className="text-xl font-black text-white mb-1">{member.name}</h3>
-                      <p className="text-sm font-bold tracking-widest text-primary uppercase">{member.role}</p>
-                   </div>
-                 ))}
-              </div>
-           </div>
         </section>
 
         {/* Culture CTA */}
