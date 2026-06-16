@@ -56,7 +56,7 @@ function Hero() {
     { icon: Award, title: "TRUSTED SERVICE", sub: "Since 2017" },
   ];
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden flex flex-col h-[calc(100dvh-4.75rem)] md:h-[calc(100dvh-8.5rem)]">
       {/* Full-bleed cinematic truck */}
       <div className="absolute inset-0">
         <img decoding="async" fetchPriority="high" src={heroTruck} alt="SYNGH TORQ heavy-duty truck on a wet city street at night with blue accent lighting" width={1920} height={1080} className="h-full w-full object-cover object-center" />
@@ -66,17 +66,17 @@ function Hero() {
         <div className="absolute inset-0 bg-[var(--gradient-blue)] opacity-[0.06] mix-blend-screen" />
       </div>
 
-      <div className="container relative mx-auto px-6 min-h-[calc(100vh-380px)] flex items-center py-6 lg:py-8">
+      <div className="container relative mx-auto px-6 flex-1 flex items-center pb-12 md:pb-16 pt-16 lg:pt-24">
         <div className="grid lg:grid-cols-12 gap-10 items-center w-full">
           <div className="lg:col-span-12 max-w-3xl animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.02] tracking-tight text-foreground drop-shadow-[0_4px_40px_rgba(0,0,0,0.8)]">
               <span className="block">TRACK YOUR FLEET</span>
               <span className="block">ANYTIME ANYWHERE.</span>
             </h1>
-            <p className="mt-4 max-w-lg text-foreground/85 leading-relaxed">
-              Syngh Torq delivers LTFRB-accredited GPS trackers for Motorcycle, Car, Bus, Truck, Heavy Equipment and Employee tracking. Control every fleet from anywhere in the world.
+          <p className="mt-8 md:mt-10 max-w-lg text-foreground/85 leading-relaxed">
+              Empower your business with Syngh Torq's LTFRB-accredited GPS tracking solutions. Monitor motorcycles, cars, buses, trucks, heavy equipment, and employees in real time. Optimize operations, enhance security, and maintain complete control of your fleet from anywhere in the world through one powerful management platform.
             </p>
-            <div className="mt-6 flex flex-wrap gap-4">
+            <div className="mt-8 md:mt-12 flex flex-wrap gap-4">
               <Link to="/contact" className="rounded bg-[var(--gradient-blue)] px-7 py-3.5 text-sm font-bold tracking-wider text-primary-foreground shadow-[var(--shadow-glow)] hover:opacity-90 transition">
                 REQUEST DEMO
               </Link>
@@ -88,7 +88,7 @@ function Hero() {
         </div>
       </div>
 
-      <div className="relative bg-background/40 backdrop-blur-sm">
+      <div className="relative bg-background/40 backdrop-blur-sm mb-8 md:mb-12">
         <div className="container mx-auto grid grid-cols-2 lg:grid-cols-4 px-0">
           {stats.map((s) => (
             <div key={s.title} className="flex items-center gap-3 bg-transparent px-5 py-3">
