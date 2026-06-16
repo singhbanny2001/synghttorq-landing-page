@@ -419,45 +419,49 @@ function CTA() {
 }
 
 function AboutCompany() {
-  const points = [
-    { icon: Award, title: "Since 2017", desc: "Nearly a decade of building Philippine fleet intelligence." },
-    { icon: Shield, title: "LTFRB Accredited", desc: "Official approved GPS provider for PUVs and commercial fleets." },
-    { icon: Users, title: "500+ Clients", desc: "From single-vehicle owners to nationwide logistics groups." },
-    { icon: Globe, title: "Nationwide Network", desc: "Installers and field engineers across Luzon, Visayas, Mindanao." },
-  ];
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto grid lg:grid-cols-2 gap-12 px-6 items-center">
+    <section className="py-12 lg:py-0 min-h-[calc(100dvh-4.75rem)] md:min-h-[calc(100dvh-8.5rem)] bg-background flex items-center">
+      <div className="container mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12 px-6 items-center">
         <div className="relative">
           <img decoding="async" src={aboutTeam} alt="Syngh Torq fleet operations team" width={1280} height={960} loading="lazy" className="rounded-lg border border-border shadow-[var(--shadow-card)] w-full" />
-          <div className="absolute -bottom-6 -right-6 hidden md:block rounded-lg border border-gold/40 bg-card/90 backdrop-blur p-5 max-w-[220px]">
-            <div className="text-3xl font-black text-gold">9+</div>
-            <div className="text-xs tracking-widest text-muted-foreground mt-1">YEARS PROTECTING PHILIPPINE FLEETS</div>
+          <div className="absolute -bottom-4 -right-4 hidden md:block rounded-lg border border-gold/40 bg-card/90 backdrop-blur p-4 max-w-[200px]">
+            <div className="text-2xl lg:text-3xl font-black text-gold">9+</div>
+            <div className="text-[10px] tracking-widest text-muted-foreground mt-1">YEARS PROTECTING PHILIPPINE FLEETS</div>
           </div>
         </div>
         <div>
-          <p className="text-xs tracking-[0.3em] text-primary mb-3">ABOUT SYNGH TORQ</p>
-          <h2 className="text-4xl md:text-5xl font-black leading-tight">
-            ENGINEERED IN THE PHILIPPINES.<br />
-            <span className="text-gold">BUILT FOR EVERY FLEET.</span>
+          <p className="text-xs tracking-[0.3em] text-primary mb-2">ABOUT SYNGH TORQ</p>
+          <h2 className="text-3xl lg:text-4xl font-black leading-tight">
+            BORN IN THE TRENCHES.<br />
+            <span className="text-gold">ENGINEERED WITH THE GIANTS.</span>
           </h2>
-          <p className="mt-5 text-muted-foreground leading-relaxed">
-            Syngh Torq is a Filipino-led GPS and fleet intelligence company on a mission to make every kilometer measurable. We combine LTFRB-accredited hardware, cloud telematics, and around-the-clock support to help operators cut fuel waste, prevent theft, and keep drivers safe — from a single delivery van to a 700-unit nationwide fleet.
-          </p>
-          <div className="mt-8 grid sm:grid-cols-2 gap-5">
-            {points.map((p) => (
-              <div key={p.title} className="flex gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded border border-gold/40 bg-card">
-                  <p.icon className="h-5 w-5 text-gold" />
-                </div>
-                <div>
-                  <div className="font-bold">{p.title}</div>
-                  <div className="text-sm text-muted-foreground">{p.desc}</div>
-                </div>
-              </div>
-            ))}
+          <div className="mt-4 md:mt-5 space-y-3 text-sm lg:text-base text-muted-foreground leading-relaxed">
+            <p>
+              We didn’t build Syngh Torq in a laboratory. We built it on the road, in the dirt, and on the front lines of global logistics.
+            </p>
+            <p>
+              Years ago, we looked at the vehicle tracking industry and saw a massive failure. Tech companies were building soft, passive software that didn't survive real-world chaos. Fleet managers were losing millions to theft, fuel drainage, and operational lag because their tracking systems lacked teeth.
+            </p>
+            <p>
+              We decided to change the game.
+            </p>
+            <p>
+              We embedded ourselves directly with the world’s leading fleet operators, heavy equipment commanders, and logistics giants. We listened to their frustrations, studied their vulnerabilities, and engineered Syngh Torq alongside them.
+            </p>
+            <p className="font-bold text-foreground text-base pt-1">
+              Built By Operators, For Operators.
+            </p>
+            <p>
+              Every single line of code and every piece of armor-grade hardware we deploy is a direct result of this global collaboration. Syngh Torq exists strictly to serve the exact, brutal realities of your daily operations. 
+            </p>
+            <p>
+              We do not believe in one-size-fits-all tech. We forge custom-fit, aggressive tracking solutions designed to make your specific business bulletproof.
+            </p>
+            <p className="font-bold text-foreground">
+              Our mission is simple: To give every partner the seamless connection they need to scale, and the powerful protection they need to dominate.
+            </p>
           </div>
-          <Link to="/company" className="mt-8 inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-gold">
+          <Link to="/company" className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-gold">
             LEARN MORE ABOUT OUR COMPANY <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
