@@ -37,7 +37,6 @@ function Index() {
   return (
     <SiteLayout>
       <Hero />
-      <TrustBar />
       <AboutCompany />
       <Ecosystem />
       <ProductLineup />
@@ -71,9 +70,8 @@ function Hero() {
         <div className="grid lg:grid-cols-12 gap-10 items-center w-full">
           <div className="lg:col-span-12 max-w-3xl animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.02] tracking-tight text-foreground drop-shadow-[0_4px_40px_rgba(0,0,0,0.8)]">
-              <span className="block">TRACK YOUR</span>
-              <span className="block">FLEET</span>
-              <span className="block">ANYWHERE.</span>
+              <span className="block">TRACK YOUR FLEET</span>
+              <span className="block">ANYTIME ANYWHERE.</span>
             </h1>
             <p className="mt-4 max-w-lg text-foreground/85 leading-relaxed">
               Syngh Torq delivers LTFRB-accredited GPS trackers for Motorcycle, Car, Bus, Truck, Heavy Equipment and Employee tracking. Control every fleet from anywhere in the world.
@@ -85,12 +83,6 @@ function Hero() {
               <Link to="/contact" className="rounded border border-gold/60 bg-background/40 backdrop-blur px-7 py-3.5 text-sm font-bold tracking-wider text-gold hover:bg-gold hover:text-background transition">
                 GET A QUOTE
               </Link>
-            </div>
-            {/* inline trust row */}
-            <div className="mt-6 flex flex-wrap items-center gap-x-8 gap-y-3 text-xs tracking-widest text-muted-foreground">
-              <span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-primary" /> LTFRB ACCREDITED</span>
-              <span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-primary" /> 15,000+ DEVICES</span>
-              <span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-primary" /> NATIONWIDE COVERAGE</span>
             </div>
           </div>
         </div>
@@ -421,22 +413,6 @@ function CTA() {
             REQUEST DEMO
           </button>
         </form>
-      </div>
-    </section>
-  );
-}
-
-function TrustBar() {
-  const items = [
-    "LTFRB Accredited", "DOTr Compliant", "ISO 9001 Quality",
-    "Globe & Smart SIM", "24/7 NOC Support", "Nationwide Coverage",
-  ];
-  return (
-    <section className="border-y border-border bg-card/40 py-3">
-      <div className="container mx-auto flex flex-wrap items-center justify-center gap-x-10 gap-y-3 px-6 text-xs tracking-[0.25em] text-muted-foreground">
-        {items.map((i) => (
-          <span key={i} className="flex items-center gap-2"><CheckCircle2 className="h-3.5 w-3.5 text-gold" />{i.toUpperCase()}</span>
-        ))}
       </div>
     </section>
   );
