@@ -263,7 +263,6 @@ function CombinedFeatures() {
 }
 
 function CombinedBottomSections() {
-  const industries = ["Logistics", "Car Rental", "Transportation", "Security Vehicle", "Construction", "Food & Beverages", "Oil & Gas", "Healthcare", "Emergency Vehicle", "Municipal"];
   const outcomes = [
     { icon: TrendingDown, val: "Up to 25%", label: "Fuel cost reduction with real-time fuel sensors and route optimization." },
     { icon: Shield, val: "90%", label: "Drop in theft and unauthorized use through engine cut-off and geo-fence alerts." },
@@ -278,16 +277,10 @@ function CombinedBottomSections() {
     { q: "What about after-sales support?", a: "Our in-house NOC is staffed 24/7. We typically respond to concerns within minutes and roll out updates within 48 hours." },
     { q: "Do you offer fuel monitoring?", a: "Yes. We install calibrated fuel level sensors for trucks, buses and heavy equipment — accurate to within 2% and tamper-proof." },
   ];
-  const reviews = [
-    { name: "W*l**c Logistics", role: "Owner, We***k Logistics", text: "With SYNGH TORQ I feel connected to my vehicle every time even when they are far from me. Data is a very big help in the trucking industry." },
-    { name: "Ju**us Cu****as", role: "Fleet Manager, AAT Tobacco", text: "We deliver nationwide and can monitor our vehicle anywhere in the Philippines. Service is excellent — we never encountered any issue." },
-    { name: "Jo**n Ge***e", role: "Operations Manager, SS*C", text: "We run 700+ flat beds and dump trailers. SYNGH TORQ provides updates and improvements in less than 48 hours." },
-    { name: "Jack", role: "Officer, C***o Ba**n", text: "Very accurate and real time. SYNGH TORQ's after-sales service never delays our requests across Luzon, Visayas and Mindanao." },
-  ];
 
   return (
     <section className="py-20 bg-background">
-      <div className="container mx-auto px-6 space-y-8">
+      <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-8">
           {/* OUTCOMES */}
           <div className="rounded-2xl border border-border bg-card p-8 flex flex-col justify-between hover:border-primary/50 transition overflow-hidden relative group">
@@ -308,54 +301,6 @@ function CombinedBottomSections() {
             <div className="relative h-48 -mx-8 -mb-8 mt-auto">
               <img src={fleetYard} alt="Fleet yard" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
-            </div>
-          </div>
-
-          {/* INDUSTRIES */}
-          <div className="rounded-2xl border border-border bg-card p-8 hover:border-primary/50 transition flex flex-col">
-            <p className="text-xs tracking-[0.3em] text-primary mb-3">INDUSTRIES WE SERVE</p>
-            <h3 className="text-3xl md:text-4xl font-black leading-tight mb-8">CUSTOMIZED SOLUTIONS<br />FOR <span className="text-gold">EVERY INDUSTRY</span></h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-auto">
-              {industries.map((l) => (
-                <div key={l} className="flex flex-col items-center justify-center gap-2 rounded-lg border border-border bg-background p-4 text-center hover:border-primary transition">
-                  <Truck className="h-6 w-6 text-gold" />
-                  <span className="text-xs font-semibold">{l}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-8">
-          {/* TESTIMONIALS */}
-          <div className="rounded-2xl border border-border bg-card p-8 hover:border-primary/50 transition flex flex-col">
-            <div className="flex flex-wrap items-end justify-between gap-4 mb-8">
-              <div>
-                <p className="text-xs tracking-[0.3em] text-primary mb-3">CLIENT TESTIMONIALS</p>
-                <h3 className="text-3xl md:text-4xl font-black leading-tight">TRUSTED BY <span className="text-gold">FLEETS</span></h3>
-              </div>
-              <div className="flex items-center gap-3 rounded-lg border border-border bg-background px-4 py-2">
-                <div>
-                  <div className="text-[9px] tracking-widest text-muted-foreground">EXCELLENT</div>
-                  <div className="flex gap-0.5">{Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-3 w-3 fill-gold text-gold" />)}</div>
-                </div>
-                <div className="border-l border-border pl-3 text-[10px] text-muted-foreground leading-tight">Based on 12<br />Google reviews</div>
-              </div>
-            </div>
-            <div className="grid sm:grid-cols-2 gap-4 mt-auto">
-              {reviews.map((r) => (
-                <div key={r.name} className="rounded-lg border border-border bg-background p-5 flex flex-col">
-                  <div className="flex gap-0.5 mb-3">{Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-3 w-3 fill-gold text-gold" />)}</div>
-                  <p className="text-xs text-foreground/90 italic leading-relaxed flex-1">"{r.text}"</p>
-                  <div className="mt-4 flex items-center gap-3 pt-4 border-t border-border">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--gradient-blue)] text-xs font-bold text-primary-foreground shrink-0">{r.name.charAt(0)}</div>
-                    <div className="min-w-0">
-                      <div className="text-xs font-bold truncate">{r.name}</div>
-                      <div className="text-[10px] text-muted-foreground truncate">{r.role}</div>
-                    </div>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
 
