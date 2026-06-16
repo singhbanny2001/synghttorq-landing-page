@@ -461,9 +461,6 @@ function AboutCompany() {
               Our mission is simple: To give every partner the seamless connection they need to scale, and the powerful protection they need to dominate.
             </p>
           </div>
-          <Link to="/company" className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-gold">
-            LEARN MORE ABOUT OUR COMPANY <ArrowRight className="h-4 w-4" />
-          </Link>
         </div>
       </div>
     </section>
